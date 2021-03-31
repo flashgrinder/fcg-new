@@ -1,0 +1,120 @@
+.why {
+    padding: 60px 0;
+}
+
+.why__title {
+    margin-bottom: 30px;
+}
+
+.why__box {
+    padding: 30px 50px;
+    background: rgba(27, 35, 239, 0.15);
+    border: 1px solid rgba(187, 208, 255, 0.35);
+    box-shadow: var(--shadow-blue);
+    backdrop-filter: blur(20px);
+    @include tablet(padding, 30px)
+}
+
+.why__grid {
+    display: grid;
+    grid-column-gap: 40px;
+    grid-row-gap: 50px;
+    grid-template-columns: repeat(auto-fit, minmax(160px, 1fr));
+    justify-content: space-between;
+    @include tablet(grid-template-columns, repeat(auto-fit, minmax(260px, 1fr)));
+}
+
+.why__item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    cursor: pointer;
+}
+
+.why__item:hover .why__picture::before {
+    transform: translate(0px);
+}
+
+.why__item:hover .why__heading::before {
+    width: 100%;
+}
+
+.why__item:hover .why__text::before {
+    width: 30px;
+    height: 80%;
+    border-top: 2px solid var(--color-light-blue);
+    border-left: 2px solid var(--color-light-blue);
+}
+
+.why__picture {
+    position: relative;
+    text-align: center;
+    width: 106px;
+    height: 106px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    border: 2px solid var(--color-light-blue);
+    border-radius: 50%;
+}
+
+.why__picture::before {
+    content: '';
+    position: absolute;
+    width: 85px;
+    height: 85px;
+    background-color: rgba(0, 209, 255, 0.5);
+    // opacity: .5;
+    border-radius: 50%;
+    transition: .3s ease-in-out;
+    transform: translate(30px, -20px);
+    backdrop-filter: blur(7px);
+    z-index: 0;
+}
+
+.why__img {
+    display: block;
+    height: auto;
+    object-fit: contain;
+    position: relative;
+}
+
+.why__heading {
+    position: relative;
+    z-index: 10;
+}
+.why__heading::before {
+    content: '';
+    position: absolute;
+    height: 30px;
+    width: 0%;
+    top: 0;
+    left: 10px;
+    background-color: var(--color-light-blue);
+    transition: .3s ease-in-out;
+    z-index: -1;
+}
+
+.why__text {
+    position: relative;
+    max-width: 285px;
+    margin-top: 20px;
+}
+
+.why__text::before {
+    content: '';
+    position: absolute;
+    top: 7%;
+    left: -20px;
+    width: 0px;
+    height: 0%;
+    border-top: 2px solid transparent;
+    border-left: 2px solid transparent;
+    transition: .3s ease-in-out;
+}
+
+.why__descr {
+    position: relative;
+    margin-top: 25px;
+}

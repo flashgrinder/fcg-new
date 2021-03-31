@@ -1,0 +1,93 @@
+.cases {
+    padding: 60px 0;
+}
+
+.cases__title {
+    margin-bottom: 30px;
+}
+
+.cases__swiper {
+    width: 100%;
+    height: 100%;
+    overflow: visible;
+}
+
+.cases__slide {
+    position: relative;
+    display: grid;
+    grid-column-gap: 80px;
+    grid-row-gap: 80px;
+    grid-template-areas: 
+    "img text"
+    "img text";
+    justify-content: start;
+    overflow: hidden;
+    @include to(768px) {
+        grid-row-gap: 60px;
+        grid-template-areas: 
+            "img"
+            "text";
+    }
+}
+
+.cases__picture {
+    grid-area: img;
+    opacity: 0;
+    transform: translateX(10%);
+    @include to(768px) {
+        justify-self: center;
+    }
+}
+
+.cases__text {
+    grid-area: text;
+    opacity: 0;
+}
+
+.cases__wysiwyg + h1, h2, h3 {
+    margin-top: 0;
+}
+
+.cases__img {
+    display: block;
+    width: 100%;
+    height: auto;
+    object-fit: cover;
+    box-shadow: var(--shadow-blue);
+    max-width: 391px;
+    max-height: 542px;
+}
+
+.cases__action {
+    text-align: center;
+    margin-top: 60px;
+    @include to(768px) {
+        margin-top: 30px;
+    }
+}
+
+.cases__swiper .swiper-slide-active.js-animation .cases__picture,
+.cases__swiper .swiper-slide-active.js-animation .cases__text {
+    opacity: 1;
+    transition: ease 1s;
+}
+
+.cases__swiper .swiper-slide-active.js-animation .cases__picture {
+    transform: translateX(0%);
+}
+
+.cases__action {
+    @include mobile-block {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+}
+
+.cases__btn--right {
+    margin-left: 30px;
+    @include mobile-block {
+        margin-left: 0;
+        margin-top: 30px;
+    }
+}

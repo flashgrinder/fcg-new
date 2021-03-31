@@ -1,0 +1,15 @@
+.tarrifs {
+    padding: 60px 0;
+}
+
+.tarrifs__title {
+    margin-bottom: 30px;
+}
+
+.tarrifs__grid {
+    display: grid;
+    grid-column-gap: 30px;
+    grid-row-gap: 50px;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    justify-content: space-between;
+}

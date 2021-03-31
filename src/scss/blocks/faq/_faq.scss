@@ -1,0 +1,81 @@
+.faq {
+    padding: 60px 0;
+}
+
+.faq__title {
+    margin-bottom: 30px;
+}
+
+.faq__details {
+    position: relative;
+    min-height: 0rem;
+    max-height: 10rem;
+    transition: min-height .15s linear, max-height .5s linear;
+    overflow: hidden;
+}
+
+.faq__details ~ .faq__details {
+    margin-top: 30px;
+}
+
+.faq__details[open] {
+    min-height: 2em;
+    max-height: 100em;
+}
+
+.faq__details[open] .faq__summary ~ *{
+    opacity: 1;
+    transition: opacity .5s linear;
+}
+
+.faq__details[open] .faq__summary::before {
+    transform: translateY(-50%) rotate(90deg);
+}
+
+.faq__summary {
+    position: relative;
+    display: inline-block;
+    outline: 0;
+    padding-left: 50px;
+    cursor: pointer;
+}
+
+.faq__summary::-webkit-details-marker {
+    display: none;
+}
+
+.faq__summary::-moz-list-bullet {
+    list-style-type: none;
+}
+
+.faq__summary::before {
+    content: '';
+    position: absolute;
+    left: 0px;
+    top: 50%;
+    width: 29px;
+    height: 31px;
+    background: url('data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMzMiIGhlaWdodD0iMzMiIHZpZXdCb3g9IjAgMCAzMyAzMyIgZmlsbD0ibm9uZSIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj4KPGxpbmUgeDE9IjEiIHkxPSItMSIgeDI9IjE4LjU3MzMiIHkyPSItMSIgdHJhbnNmb3JtPSJtYXRyaXgoMC43MDcxMDcgLTAuNzA3MTA3IC0wLjcwNzEwNyAtMC43MDcxMDcgMTIuNDIwMiAyOS4yNjA3KSIgc3Ryb2tlPSIjNEE3MkNFIiBzdHJva2Utd2lkdGg9IjIiIHN0cm9rZS1saW5lY2FwPSJyb3VuZCIgc3Ryb2tlLWxpbmVqb2luPSJyb3VuZCIvPgo8cGF0aCBkPSJNMTMuNDIwMiAzLjQyMDQxTDI2LjQwOTcgMTYuNDA5OCIgc3Ryb2tlPSIjNEE3MkNFIiBzdHJva2Utd2lkdGg9IjIiIHN0cm9rZS1saW5lY2FwPSJyb3VuZCIgc3Ryb2tlLWxpbmVqb2luPSJyb3VuZCIvPgo8L3N2Zz4K') no-repeat 50% 50% / 29px 31px;
+    transform: translateY(-50%) rotate(0deg);
+    transition: transform .1s linear;
+}
+
+.faq__summary ~ * {
+    margin-top: 20px;
+    padding-left: 50px;
+    opacity: 0;
+    transition: opacity .5s linear;
+}
+
+.faq__question {
+    display: inline-block;
+}
+
+.faq__question:hover {
+    text-decoration: underline;
+}
+
+.faq__answer {
+    margin-top: 30px;
+    padding-left: 50px;
+}

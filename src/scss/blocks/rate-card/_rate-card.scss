@@ -1,0 +1,33 @@
+.rate-card {
+    padding: 20px 12px 12px;
+    background: rgba(27, 35, 239, 0.55);
+    border: 1px solid rgba(187, 208, 255, 0.35);
+    backdrop-filter: blur(20px);
+    border-radius: 0px 0px 30px 30px;
+    box-shadow: 9px 9px 18px rgba(10, 40, 53, 0.15), inset 0px 4px 24px rgba(255, 255, 255, 0.33);
+    transition: background .2s ease;
+}
+
+.rate-card:hover {
+    background: rgba(27, 35, 239, 0.15);
+}
+
+.rate-card__cell {
+    padding: 5px 0 10px 0;
+}
+
+.rate-card__cell ~ .rate-card__cell {
+    border-top: 1px solid var(--color-white);
+}
+
+.rate-card__name {
+    margin-bottom: 5px;
+}
+
+.rate-card__action {
+    text-align: center;
+}
+
+.rate-card__btn {
+    width: 100%;
+}

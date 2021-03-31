@@ -1,13 +1,12 @@
 :root {
-    --color-blue: #4A72CE;
-    --color-blue-opaciti-85: rgba(74, 114, 206, 0.85);
-    --color-light-blue: #5FB2D6;
-    --color-dark-blue: #43b1e0;
+    --color-light-blue: #31A5D8;
+    --color-dark-blue: #4A72CE;
+    --gradient-light-blue: radial-gradient(70.3% 288.07% at 1.17% 101.28%, #C0C9DE 0%, #638DEE 100%), #4A72CE;
+    --shadow-blue: 9px 9px 18px rgba(10, 40, 53, 0.15), inset 0px 4px 24px rgba(255, 255, 255, 0.33);
+    --color-dark-gray: #999999;
     --color-dark: #555555;
 	--color-gray: #EFEFEF;
 	--color-white: #FFFFFF;
-    --color-dark-gray: #A9A9A9;
-    --color-white-gray: #E5E5E5;
     --font-roboto: "Roboto", "Helvetica Neue", Helvetica, Arial, sans-serif;
-    --font-gotham: "GothamPro", "Helvetica Neue", Helvetica, Arial, sans-serif;
+    --font-gotham: "Gotham Pro", "Helvetica Neue", Helvetica, Arial, sans-serif;
 }

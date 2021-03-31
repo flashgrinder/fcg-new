@@ -1,0 +1,29 @@
+.wysiwyg h1, h2, h3, h4, h5, h6 {
+    font-family: var(--font-gotham);
+    color: var(--color-dark-blue);
+    margin-top: 0;
+}
+
+.wysiwyg h1 {
+    font-size: 38px;
+    @include tablet(font-size, 32px);
+    @include mobile(font-size, 28px);
+}
+.wysiwyg h2 {
+    font-size: 32px;
+    @include mobile(font-size, 28px);
+}
+
+.wysiwyg h3 {
+    font-size: 28px;
+    @include mobile(font-size, 24px);
+}
+
+.wysiwyg h4 {
+    font-size: 24px;
+    @include mobile(font-size, 20px);
+}
+
+.wysiwyg p {
+    margin: 20px 0;
+}
