@@ -979,7 +979,6 @@ img {
       grid-template-areas: "img text" "img text";
   -webkit-justify-content: start;
           justify-content: start;
-  overflow: hidden;
 }
 
 .cases__picture {

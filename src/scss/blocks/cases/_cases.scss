@@ -21,7 +21,6 @@
     "img text"
     "img text";
     justify-content: start;
-    overflow: hidden;
     @include to(768px) {
         grid-row-gap: 60px;
         grid-template-areas: 
