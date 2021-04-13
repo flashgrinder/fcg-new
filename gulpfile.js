@@ -87,7 +87,7 @@ function styles() {
 	
 	return gulp.src(source.src.sass)
 	.pipe(sass().on('error', sass.logError))
-	.pipe(concat('style.min.css'))
+	.pipe(concat('style.min-ver-2.0.css'))
 	.pipe(gcmq())
 	.pipe(postcss(plugins))
 	.pipe(gulp.dest(source.src.css))
@@ -104,7 +104,7 @@ function js() {
     .transform(babelify, {presets: ['@babel/preset-env']})
     .bundle()
     .pipe(vss(entry))
-    .pipe(rename({extname: '.min.js'}))
+    .pipe(rename({extname: '.min-ver-2.0.js'}))
     .pipe(vbuffer())
     .pipe(gulp.dest('./src/js'))
 }

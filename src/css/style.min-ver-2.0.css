@@ -511,6 +511,7 @@ img {
 .page__container {
   max-width: 1920px;
   margin: 0 auto;
+  overflow-x: hidden;
 }
 
 /* Top-screen */
@@ -928,6 +929,9 @@ img {
   border-radius: 0px 0px 30px 30px;
   box-shadow: 9px 9px 18px rgba(10, 40, 53, 0.15), inset 0px 4px 24px rgba(255, 255, 255, 0.33);
   transition: background .2s ease;
+  -webkit-align-self: start;
+              -ms-grid-row-align: start;
+          align-self: start;
 }
 
 .rate-card:hover {
@@ -997,12 +1001,6 @@ img {
   -ms-grid-column: 3;
   grid-area: text;
   opacity: 0;
-}
-
-.cases__wysiwyg + h1,
-h2,
-h3 {
-  margin-top: 0;
 }
 
 .cases__img {
@@ -1386,11 +1384,11 @@ h3 {
 /* Wysiwyg */
 
 .wysiwyg h1,
-h2,
-h3,
-h4,
-h5,
-h6 {
+.wysiwyg h2,
+.wysiwyg h3,
+.wysiwyg h4,
+.wysiwyg h5,
+.wysiwyg h6 {
   font-family: var(--font-gotham);
   color: var(--color-dark-blue);
   margin-top: 0;
@@ -1543,7 +1541,8 @@ h6 {
     display: flex;
     -webkit-align-items: center;
             align-items: center;
-    max-height: 80px;
+    height: 90px;
+    max-height: 90px;
     font-size: 16px;
     padding: 21px 105px 20px 30px;
   }

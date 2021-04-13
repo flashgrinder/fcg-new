@@ -4,12 +4,12 @@ const sliderCases = new Swiper('.cases__swiper', {
     effect: 'fade',
     slidesPerView: 1,
     loop: true,
-    speed: 1000,
+    speed: 1500,
     fadeEffect: {
         crossFade: true
     },
     autoplay: {
-        delay: 3000,
+        delay: 4000,
         disableOnInteration: false
     },
     navigation: {

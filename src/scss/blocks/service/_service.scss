@@ -51,7 +51,8 @@
     @include mobile-block {
         display: flex;
         align-items: center;
-        max-height: 80px;
+        height: 90px;
+        max-height: 90px;
         font-size: 16px;
         padding: 21px 105px 20px 30px;
     }

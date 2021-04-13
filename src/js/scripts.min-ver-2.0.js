@@ -11331,40 +11331,6 @@ Object.defineProperty(exports, 'default', {
 Object.defineProperty(exports, "__esModule", {
   value: true
 });
-exports.default = void 0;
-var details = Array.from(document.querySelectorAll('.accardion > details'));
-
-function onToggle(event) {
-  var detailsOpen = Array.from(document.querySelectorAll('.accardion > details[open]'));
-
-  if (event.currentTarget.open) {
-    detailsOpen.forEach(function (el) {
-      if (el === event.currentTarget) {
-        return;
-      }
-
-      el.open = false;
-    });
-  }
-}
-
-function init() {
-  details.forEach(function (el) {
-    return el.addEventListener('toggle', onToggle);
-  });
-}
-
-var _default = {
-  init: init
-};
-exports.default = _default;
-
-},{}],93:[function(require,module,exports){
-"use strict";
-
-Object.defineProperty(exports, "__esModule", {
-  value: true
-});
 exports.sliderCases = exports.additionalSlider = void 0;
 
 var _bundle = _interopRequireDefault(require("swiper/bundle"));
@@ -11375,12 +11341,12 @@ var sliderCases = new _bundle.default('.cases__swiper', {
   effect: 'fade',
   slidesPerView: 1,
   loop: true,
-  speed: 1000,
+  speed: 1500,
   fadeEffect: {
     crossFade: true
   },
   autoplay: {
-    delay: 3000,
+    delay: 4000,
     disableOnInteration: false
   },
   navigation: {
@@ -11422,21 +11388,44 @@ var additionalSlider = new _bundle.default('.additional-serv__swiper', {
 });
 exports.additionalSlider = additionalSlider;
 
-},{"swiper/bundle":91}],94:[function(require,module,exports){
+},{"swiper/bundle":91}],93:[function(require,module,exports){
 "use strict";
 
 var _sliders = require("../libs/modules/sliders.js");
 
-var _accardion = _interopRequireDefault(require("../libs/modules/accardion.js"));
-
-function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
-
+// import details from "../libs/modules/accardion.js"
 window.addEventListener('DOMContentLoaded', function (e) {
-  _sliders.sliderCases.init();
+  var haveCases = document.querySelector('.cases');
+  var haveAdditionalSlider = document.querySelector('.additional-serv');
 
-  _sliders.additionalSlider.init();
+  if (haveCases) {
+    _sliders.sliderCases.init();
+  }
 
-  _accardion.default.init();
+  if (haveAdditionalSlider) {
+    _sliders.additionalSlider.init();
+  } // details.init();
+
+
+  var details = Array.from(document.querySelectorAll('.accardion > details'));
+
+  function onToggle(event) {
+    var detailsOpen = Array.from(document.querySelectorAll('.accardion > details[open]'));
+
+    if (event.currentTarget.open) {
+      detailsOpen.forEach(function (el) {
+        if (el === event.currentTarget) {
+          return;
+        }
+
+        el.open = false;
+      });
+    }
+  }
+
+  details.forEach(function (el) {
+    return el.addEventListener('toggle', onToggle);
+  });
 });
 
-},{"../libs/modules/accardion.js":92,"../libs/modules/sliders.js":93}]},{},[94]);
+},{"../libs/modules/sliders.js":92}]},{},[93]);
