@@ -11345,10 +11345,7 @@ var sliderCases = new _bundle.default('.cases__swiper', {
   fadeEffect: {
     crossFade: true
   },
-  autoplay: {
-    delay: 4000,
-    disableOnInteration: false
-  },
+  autoHeight: true,
   navigation: {
     prevEl: '.cases__arrow--right'
   },
