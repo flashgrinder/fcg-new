@@ -7,6 +7,8 @@
 }
 
 .additional-serv__item {
+    display: block;
+    text-decoration: none;
     padding: 20px;
 }
 
@@ -36,14 +38,15 @@
     display: -webkit-flex;
     display: flex;
     flex-direction: column;
-    justify-content: flex-start;
+    justify-content: center;
     text-align: center;
     padding: 10px 15px;
 }
 
 .additional-serv__name {
-    margin-top: calc(25% - 20px);
-    margin-bottom: 15px;
+    @include from-to(768px, 1023px){
+        font-size: 34px;
+    }
 }
 
 .additional-serv__slide {
@@ -59,7 +62,7 @@
 }
 
 .additional-serv__arrows {
-    @include mobile-block {
+    @include tablet-block {
         display: flex;
         justify-content: center;
         margin-top: 20px;
@@ -77,7 +80,7 @@
     padding: 4px;
     border: 1px solid transparent;
     transition: ease .3s;
-    @include mobile-block {
+    @include tablet-block {
         position: relative;
         justify-content: center;
         transform: none;

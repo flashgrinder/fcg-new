@@ -1045,6 +1045,8 @@ img {
 }
 
 .additional-serv__item {
+  display: block;
+  text-decoration: none;
   padding: 20px;
 }
 
@@ -1077,15 +1079,10 @@ img {
   display: flex;
   -webkit-flex-direction: column;
           flex-direction: column;
-  -webkit-justify-content: flex-start;
-          justify-content: flex-start;
+  -webkit-justify-content: center;
+          justify-content: center;
   text-align: center;
   padding: 10px 15px;
-}
-
-.additional-serv__name {
-  margin-top: calc(25% - 20px);
-  margin-bottom: 15px;
 }
 
 .additional-serv__slide {
@@ -1455,6 +1452,25 @@ img {
     display: none;
   }
 
+  .additional-serv__arrows {
+    display: -webkit-flex;
+    display: flex;
+    -webkit-justify-content: center;
+            justify-content: center;
+    margin-top: 20px;
+  }
+
+  .additional-serv__arrow {
+    position: relative;
+    -webkit-justify-content: center;
+            justify-content: center;
+    -webkit-transform: none;
+            transform: none;
+    top: auto;
+    left: auto;
+    right: auto;
+  }
+
   .wysiwyg h1 {
     font-size: 32px;
   }
@@ -1561,25 +1577,6 @@ img {
     margin-top: 30px;
   }
 
-  .additional-serv__arrows {
-    display: -webkit-flex;
-    display: flex;
-    -webkit-justify-content: center;
-            justify-content: center;
-    margin-top: 20px;
-  }
-
-  .additional-serv__arrow {
-    position: relative;
-    -webkit-justify-content: center;
-            justify-content: center;
-    -webkit-transform: none;
-            transform: none;
-    top: auto;
-    left: auto;
-    right: auto;
-  }
-
   .form__input ~ .form__input {
     margin-left: 0;
     margin-top: 20px;
@@ -1599,5 +1596,11 @@ img {
 
   .wysiwyg h4 {
     font-size: 20px;
+  }
+}
+
+@media screen and (min-width: 768px) and (max-width: 1023px) {
+  .additional-serv__name {
+    font-size: 34px;
   }
 }
