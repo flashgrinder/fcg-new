@@ -49,6 +49,34 @@ const additionalSlider = new Swiper('.additional-serv__swiper', {
 
 });
 
+const tarrifsSlider = new Swiper('.tarrifs__swiper', {
+    slidesPerView: 1,
+    spaceBetween: 30,
+    loop: true,
+    speed: 2000,
+    autoplay: {
+        delay: 5000
+    },
+    breakpoints: {
+        575: {
+            slidesPerView: 1
+        },
+        767: {
+            slidesPerView: 2
+        },
+        991: {
+            slidesPerView: 3
+        },
+        1024: {
+            slidesPerView: 4
+        },
+        1279: {
+            slidesPerView: 5
+        }
+    }
+
+});
 
 
-export {additionalSlider, sliderCases}
+
+export {additionalSlider, sliderCases, tarrifsSlider}

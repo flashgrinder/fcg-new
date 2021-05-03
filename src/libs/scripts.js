@@ -1,10 +1,11 @@
-import {additionalSlider, sliderCases} from "../libs/modules/sliders.js"
+import {additionalSlider, sliderCases, tarrifsSlider} from "../libs/modules/sliders.js"
 // import details from "../libs/modules/accardion.js"
 
 window.addEventListener('DOMContentLoaded', (e) => {
 
     let haveCases = document.querySelector('.cases');
     let haveAdditionalSlider = document.querySelector('.additional-serv');
+    let haveTarrifsSlider = document.querySelector('.tarrifs_slider');
 
     if (haveCases) {
         sliderCases.init();
@@ -12,6 +13,10 @@ window.addEventListener('DOMContentLoaded', (e) => {
 
     if (haveAdditionalSlider) {
         additionalSlider.init();
+    }
+
+    if (haveTarrifsSlider) {
+        tarrifsSlider.init();
     }
     
     // details.init();

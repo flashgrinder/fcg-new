@@ -11331,7 +11331,7 @@ Object.defineProperty(exports, 'default', {
 Object.defineProperty(exports, "__esModule", {
   value: true
 });
-exports.sliderCases = exports.additionalSlider = void 0;
+exports.tarrifsSlider = exports.sliderCases = exports.additionalSlider = void 0;
 
 var _bundle = _interopRequireDefault(require("swiper/bundle"));
 
@@ -11384,6 +11384,33 @@ var additionalSlider = new _bundle.default('.additional-serv__swiper', {
   }
 });
 exports.additionalSlider = additionalSlider;
+var tarrifsSlider = new _bundle.default('.tarrifs__swiper', {
+  slidesPerView: 1,
+  spaceBetween: 30,
+  loop: true,
+  speed: 2000,
+  autoplay: {
+    delay: 5000
+  },
+  breakpoints: {
+    575: {
+      slidesPerView: 1
+    },
+    767: {
+      slidesPerView: 2
+    },
+    991: {
+      slidesPerView: 3
+    },
+    1024: {
+      slidesPerView: 4
+    },
+    1279: {
+      slidesPerView: 5
+    }
+  }
+});
+exports.tarrifsSlider = tarrifsSlider;
 
 },{"swiper/bundle":91}],93:[function(require,module,exports){
 "use strict";
@@ -11394,6 +11421,7 @@ var _sliders = require("../libs/modules/sliders.js");
 window.addEventListener('DOMContentLoaded', function (e) {
   var haveCases = document.querySelector('.cases');
   var haveAdditionalSlider = document.querySelector('.additional-serv');
+  var haveTarrifsSlider = document.querySelector('.tarrifs_slider');
 
   if (haveCases) {
     _sliders.sliderCases.init();
@@ -11401,6 +11429,10 @@ window.addEventListener('DOMContentLoaded', function (e) {
 
   if (haveAdditionalSlider) {
     _sliders.additionalSlider.init();
+  }
+
+  if (haveTarrifsSlider) {
+    _sliders.tarrifsSlider.init();
   } // details.init();
 
 

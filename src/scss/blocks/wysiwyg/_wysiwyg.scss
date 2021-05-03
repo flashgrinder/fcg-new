@@ -32,3 +32,8 @@
 .wysiwyg p {
     margin: 20px 0;
 }
+
+.wysiwyg ul li ~ li,
+.wysiwyg ol li ~ li {
+    margin-top: 15px;
+}

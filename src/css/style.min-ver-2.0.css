@@ -934,6 +934,10 @@ img {
           align-self: start;
 }
 
+.rate-card_slide {
+  box-shadow: none;
+}
+
 .rate-card:hover {
   background: rgba(27, 35, 239, 0.15);
 }
@@ -1409,6 +1413,11 @@ img {
 
 .wysiwyg p {
   margin: 20px 0;
+}
+
+.wysiwyg ul li ~ li,
+.wysiwyg ol li ~ li {
+  margin-top: 15px;
 }
 
 /* MEDIA QUERIES */
